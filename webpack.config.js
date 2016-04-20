@@ -8,7 +8,7 @@ var precss       = require('precss');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    './frontend/index.js'
+    './src/index.js'
   ],
   output: {
     path: path.join(__dirname, 'public'),
@@ -31,7 +31,7 @@ module.exports = {
     ],
 
     loaders: [
-      { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!postcss-loader")},
+      { test: /\.scss$|\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!postcss-loader")},
       {test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader"} 
     ]
   },

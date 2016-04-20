@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './SCSS/main.scss';
+import DatePick from './containers/DatePick'
 console.log('this')
+
 export default class App extends Component {
   render() {
     return (<div>
+      <DatePick />
       <h1>Hello, world!!!.
       </h1>
 		<img src='./public/pic.png' alt='' />
